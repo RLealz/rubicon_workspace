@@ -1,0 +1,9 @@
+.env
+contacts.json
+node_modules/
+logs/
+memory/
+.clawhub/
+andrej-karpathy-skills/
+mission-control/
+skills/
