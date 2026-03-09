@@ -1,4 +1,4 @@
-# TOOLS.md - TEAM-INTELLIGENCE Shared Resources
+# TOOLS.md - ThreatIntel / Team Intelligence Shared Resources
 
 ## CAI (Cybersecurity AI Framework)
 
@@ -39,16 +39,16 @@
 
 ### Argus -- Reconnaissance Dashboard
 **Path:** `/home/alpha/infra/apps/argus/`
-**Description:** Network assessment, web fingerprinting, service enumeration. Primary recon interface for all sub-agents.
+**Description:** Network assessment, web fingerprinting, service enumeration. Primary recon interface for the Team Intelligence workflow.
 **CLI:** `argus`
 
 ### BugTrace-AI -- Vulnerability Tracking
 **Path:** `/home/alpha/infra/apps/BugTrace-AI/`
-**Description:** SAST/DAST analysis and vuln research. CVE agent uses this for hypothesis generation and validation.
+**Description:** SAST/DAST analysis and vuln research. Use this for CVE hypothesis generation and validation within the Team Intelligence workflow.
 
 ### PentestOPS -- Intelligence Reporting
 **Path:** `/home/alpha/infra/apps/PentestOPS/`
-**Description:** Track findings (CWE), assets, projects. Reporting agent uses this for intelligence product management.
+**Description:** Track findings (CWE), assets, projects. Use this for intelligence product management and dissemination.
 
 ---
 
@@ -76,8 +76,8 @@
 
 ## Intelligence Workflow
 
-1. **Collect:** OSINT agent gathers raw data (Shodan, theHarvester, Subfinder)
-2. **Analyze:** CVE agent identifies vulnerabilities (BugTrace-AI, Nuclei, Nmap)
-3. **Attribute:** Threat Actor agent maps relationships (NetworkX, web scraping)
-4. **Report:** Reporting agent synthesizes products (PentestOPS, reportlab)
+1. **Collect:** Gather raw data (Shodan, theHarvester, Subfinder)
+2. **Analyze:** Identify vulnerabilities and exploit relevance (BugTrace-AI, Nuclei, Nmap)
+3. **Attribute:** Map relationships and TTP overlap carefully (NetworkX, web scraping)
+4. **Report:** Synthesize intelligence products (PentestOPS, reportlab)
 5. **Verify:** Multi-source confirmation before any attribution claim

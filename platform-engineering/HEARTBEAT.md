@@ -48,12 +48,11 @@ Log all findings to memory/YYYY-MM-DD.md
 **Task:** Monitor LLM provider status and model availability
 ```
 Check provider status:
-- Moonshot (kimi-k2.5, kimi-k2-0905-preview)
-- Google (gemini-2.5-pro, gemini-2.5-flash)
-- DeepSeek (deepseek-chat, deepseek-reasoner)
-- xAI (grok-4, grok-4-1-fast-reasoning, grok-3-mini)
-- Mistral (mistral-large-latest, mistral-small-latest, codestral)
-- OpenRouter (auto, free models as fallbacks)
+- Anthropic (Claude Sonnet 4.6 and configured family)
+- Groq (active low-latency operational models)
+- OpenRouter (fallbacks, specialty models, free resilience paths)
+- OpenAI-Codex (coding-focused execution paths)
+- Vercel AI Gateway (gateway-routed provider access where configured)
 
 Identify:
 - Providers in cooldown
@@ -169,11 +168,11 @@ When this heartbeat fires:
 
 **Default response:** If no checks are due and no issues detected, reply `HEARTBEAT_OK`
 
-**Escalation:** If critical issues found, spawn appropriate Council member:
-- Security issues → Security Sentinel
-- Infrastructure issues → DevOps Commander
-- Provider issues → Provider Guru
-- Channel issues → Channel Maestro
+**Escalation:** If critical issues found, route to the appropriate live execution agent:
+- Runtime and deployment issues -> `platform-ops`
+- Provider auth, routing, or model drift -> `platform-providers`
+- Channel delivery or trust-policy issues -> `platform-channels`
+- Skill, toolchain, or extension-code issues -> `platform-skills`
 
 ---
 

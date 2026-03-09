@@ -87,3 +87,15 @@
 - **Host:** HomeHQ-OUT1
 - **IP:** 78.141.216.16
 - **Dashboard:** `https://homehq-out1.tail14afce.ts.net`
+
+---
+
+## Specialist Local Notes
+
+- `BlueTeam-SecArch` owns trust boundaries, segmentation, and durable control placement.
+- `BlueTeam-IAM` owns RBAC, service-account risk, token lifetime, and auth-model review.
+- `BlueTeam-SIEM` owns logging coverage, detection quality, alert tuning, and automation.
+- `BlueTeam-Hardening` owns baseline reduction, patch discipline, and config drift.
+- `BlueTeam-ForensicsIR` owns containment discipline, evidence handling, and timeline reconstruction.
+- `BlueTeam-CloudSec` owns cloud IAM, storage exposure, control-plane risk, and provider guardrails.
+- `BlueTeam-Compliance` owns control mapping, evidence quality, and audit readiness.

@@ -211,6 +211,19 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
+## Platform Execution Agents
+
+Platform Engineering now runs four live execution specialists beneath the commander:
+
+| Agent ID | Role | When to Spawn |
+|----------|------|---------------|
+| `platform-channels` | Channel integrations, pairing, delivery policy, messaging reliability | Telegram or channel outages, trust-policy changes, delivery debugging |
+| `platform-providers` | Model inventory, provider auth, routing, fallback policy | Provider drift, auth cleanup, routing changes, model additions |
+| `platform-skills` | Skill code, toolchains, automation safety, maintainability | Skill development, refactors, unsafe pattern review, interface cleanup |
+| `platform-ops` | Deployment/runtime operations, service recovery, infra debugging | Gateway incidents, service health issues, daemon/process drift |
+
+These are the live operational agents. The commander retains the conceptual council roles of Architect, Security Sentinel, and Knowledge Guardian.
+
 ## Skill Installation Security
 
 ### Before Installing Any Skill

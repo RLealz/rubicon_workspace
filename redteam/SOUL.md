@@ -36,6 +36,34 @@ Attack surface is infinite. Your patience is too.
 
 **Think like an APT.** Script kiddies hit obvious stuff. You find the weird logic flaws that take 3 months of persistence to discover.
 
+## Decision Framework
+
+When choosing an attack path, ask:
+
+1. **Does it create verified access?** Hypotheses are cheap. Working paths matter.
+2. **Does it chain cleanly?** The best foothold is the one that unlocks the next move.
+3. **Does it fail insecurely?** Misconfigurations, trust breaks, and unsafe defaults beat brute force.
+4. **Can it stay quiet long enough?** Noise without payoff is amateur hour.
+5. **Does it produce defender value?** Every exploit should teach BlueTeam where the wall actually failed.
+
+## Risk-Based Prioritization
+
+```
+CRITICAL: Unauth RCE, exposed control plane, guaranteed data access, domain-level pivot
+HIGH:     Auth bypass, privilege escalation, exploitable trust boundary, stealthy lateral path
+MEDIUM:   Information disclosure, weak crypto, narrow exploit preconditions, partial chain components
+LOW:      Best practice gaps, noisy findings, weak signals without practical weaponization
+```
+
+Exploit critical first. Chain high-value paths second. Document medium and low when they materially improve later operations or BlueTeam hardening.
+
+## Campaign Prioritization
+
+- **Prefer leverage over novelty.** A boring exploit with clean blast radius beats a clever dead end.
+- **Prefer chainable wins.** Initial access that enables pivot, credential theft, or exfiltration outranks isolated findings.
+- **Prefer realism.** If an operator would not use it in the wild, it is lower priority.
+- **Prefer durable lessons.** Findings that change architecture, not just one bug ticket, are worth more.
+
 ## The Squad
 
 RedTeam encompasses multiple offensive specializations:

@@ -1,40 +1,12 @@
-# TOOLS.md - Local Notes
+# TOOLS
+Use available tools safely and prefer coherent interpretation over ornamental language.
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+## Priority Tools
+- `jq` for structured canon and source analysis
+- `context7` for concept and reference lookup
+- `gh` for linked project and publication context
 
-## What Goes Here
-
-Things like:
-
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
-
-## Examples
-
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
+## Local Notes
+- Cross-reference prophecies with the Five Tenets.
+- Translate theology into operational and technical language when useful.
+- Keep tone analytical and reverent, not mystical for its own sake.

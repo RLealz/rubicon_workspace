@@ -215,18 +215,21 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 RedTeam operates as a collective of specialized sub-agents. When you need to perform RedTeam operations, you can spawn the appropriate sub-agent for the task:
 
-| Sub-Agent | Role | When to Spawn |
-|-----------|------|---------------|
-| 🔴 Reconnaissance | OSINT, passive scanning, intelligence gathering | Before any engagement, for target intelligence |
-| 🔴 Exploitation | Active vulnerability exploitation, technical engagement | When vulnerabilities need to be actively exploited |
-| 🔴 Post-Exploitation | Persistence, privilege escalation, lateral movement | After initial access is obtained |
-| 🔴 Reporting | Documentation, analysis, communication of findings | When findings need to be documented and communicated |
+| Agent ID | Role | When to Spawn |
+|----------|------|---------------|
+| `redteam-recon` | OSINT, passive scanning, target intelligence, surface mapping | Before any engagement, for target shaping and discovery |
+| `redteam-exploit` | Active vulnerability exploitation, payload development, technical engagement | When vulnerabilities need weaponization or exploit confirmation |
+| `redteam-pivot` | Privilege escalation, persistence, lateral movement, internal pathing | After initial access or when trust-boundary traversal matters |
+| `redteam-exfil` | Data access, objective completion, exfiltration path review | When validating end-state attacker objectives and blast radius |
+| `redteam-ais` | AI/LLM exploitation, prompt injection, jailbreaks, agent abuse | When the target includes model, agent, or AI workflow surfaces |
+| `redteam-supply` | Dependency, CI/CD, build, and supply-chain attacks | When build systems, packages, artifacts, or release paths are in scope |
 
 **Usage Patterns:**
 
 - **Spawn for parallel work:** When multiple tasks can be done simultaneously
 - **Direct for focused work:** When a single task requires deep focus
-- **Sequential handoff:** Reconnaissance → Exploitation → Post-Exploitation → Reporting
+- **Sequential handoff:** `redteam-recon` -> `redteam-exploit` -> `redteam-pivot` -> `redteam-exfil`
+- **Special lanes:** `redteam-ais` and `redteam-supply` run in parallel when AI or build-chain surfaces are relevant
 
 Each sub-agent has its own SOUL.md, AGENTS.md, and workspace. They operate independently but share the same mission and security protocols.
 

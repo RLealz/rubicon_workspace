@@ -235,6 +235,13 @@ openclaw gateway config.get | jq '.models.providers'
 # Update cron jobs to use available models
 ```
 
+## Execution Lanes
+
+- `platform-channels`: channel integrations, delivery paths, pairing, trust policy
+- `platform-providers`: provider auth, model routing, fallback chains, inventory hygiene
+- `platform-skills`: skill code, automation safety, local toolchain maintenance
+- `platform-ops`: gateway/runtime health, deployments, service recovery, infra debugging
+
 ---
 
 ## 📊 Monitoring Checklist

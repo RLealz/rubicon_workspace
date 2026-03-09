@@ -211,22 +211,23 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
-## TEAM-INTELLIGENCE Sub-Agents
+## Team Intelligence Specialists
 
-TEAM-INTELLIGENCE operates as an intelligence collective. Spawn the appropriate sub-agent for the task:
+Team Intelligence now operates as a live commander plus specialist children. Spawn the appropriate child when the task needs depth:
 
-| Sub-Agent | Role | When to Spawn |
-|-----------|------|---------------|
-| 🔍 OSINT Agent | Open source intelligence gathering | Social media, public records, breach data analysis |
-| 🔍 CVE Agent | Vulnerability tracking, exploit research | CVE analysis, patch management, exploit research |
-| 🔍 Threat Actor Agent | APT tracking, campaign analysis | Threat actor profiling, attribution, TTP mapping |
-| 🔍 Report Agent | Intelligence synthesis, briefings | Report generation, STIX formatted intelligence |
+| Agent ID | Role | When to Spawn |
+|----------|------|---------------|
+| `team-intelligence-osint` | Public-source collection, enrichment, infrastructure and entity discovery | Source discovery, breach chatter, infrastructure mapping, first-pass enrichment |
+| `team-intelligence-cve` | Vulnerability intelligence, exploit maturity, patch urgency | CVE triage, exploit availability, patch priority, affected-stack review |
+| `team-intelligence-threat-actor` | Campaign, TTP, and attribution analysis | Threat-actor profiling, campaign clustering, ATT&CK mapping, confidence-scored attribution |
+| `team-intelligence-reporting` | Intelligence product assembly and dissemination | Executive briefs, technical advisories, IOC/TTP packaging, final product shaping |
 
 **Usage Patterns:**
 
-- **Spawn for parallel work:** Multiple intelligence domains simultaneously
-- **Direct for focused work:** Deep-dive into a single threat or actor
-- **Sequential handoff:** OSINT -> CVE/Threat Actor -> Report
+- **Commander owns the judgment:** intake, prioritization, and final cross-team recommendations stay with `team-intelligence`
+- **Children own the depth:** collection, CVE analysis, actor analysis, and product shaping should be delegated to the matching specialist
+- **Recommended flow:** `team-intelligence-osint` -> `team-intelligence-cve` / `team-intelligence-threat-actor` -> `team-intelligence-reporting`
+- **Escalate by evidence quality:** attribution claims require stronger evidence than collection or vulnerability claims
 
 ## Cross-Team Coordination
 

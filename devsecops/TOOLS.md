@@ -74,8 +74,8 @@
 
 ## DevSecOps Workflow
 
-1. **Scan:** Pipeline agent secures CI/CD (BugTrace-AI, n8n automation)
-2. **Analyze:** Code Security agent reviews application code (SAST, gh CLI)
-3. **Harden:** Infrastructure agent audits environments (Argus, Nmap, Docker)
-4. **Monitor:** Observability agent tracks health (Uptime Kuma, Portainer, OpenTelemetry)
+1. **Scan:** `devsecops-pipeline` secures CI/CD, dependencies, and release gates (BugTrace-AI, n8n automation)
+2. **Analyze:** `devsecops-appsec` reviews application code, auth, APIs, and supply-chain risk (SAST, gh CLI)
+3. **Harden:** `devsecops-infra` audits environments, runtime exposure, and recovery posture (Argus, Docker, IaC tooling)
+4. **Monitor:** `devsecops-observability` tracks health, telemetry quality, and alerting coverage (Uptime Kuma, Portainer, OpenTelemetry)
 5. **Report:** All agents feed findings into PentestOPS for lifecycle tracking

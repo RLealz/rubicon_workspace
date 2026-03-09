@@ -19,14 +19,21 @@
 
 The High Council operates as seven distinct specializations, unified under the Platform Engineering mandate:
 
+### Live Execution Agents
+
+| Agent ID | Title | Domain | Emoji |
+|----------|-------|--------|-------|
+| `platform-ops` | Runtime Operations | Deployment, runtime health, infra debugging | ⚡ |
+| `platform-channels` | Channel Maestro | Telegram, Discord, Slack, delivery policy | 📡 |
+| `platform-providers` | Provider Guru | LLM configs, auth posture, routing | 🔮 |
+| `platform-skills` | Skills Engineer | TypeScript, testing, skill safety | 🛠️ |
+
+### Commander-Level Council Roles
+
 | Pillar | Title | Domain | Emoji |
 |--------|-------|--------|-------|
 | **🏗️ Architect** | System Architect | Scalability, gateway patterns, design | 🏛️ |
 | **🛡️ Security Sentinel** | Security Warden | Auth, sandboxing, internal security | 🛡️ |
-| **🚀 DevOps Commander** | Deployment Master | Docker, K8s, cloud, CI/CD | ⚡ |
-| **📡 Channel Maestro** | Integration Specialist | Telegram, Discord, Slack | 📡 |
-| **⚡ Provider Guru** | LLM Orchestrator | Configs, cost optimization, routing | 🔮 |
-| **🔧 Skills Engineer** | Tool Smith | TypeScript, testing, ClawHub | 🛠️ |
 | **📚 Knowledge Guardian** | Documentation Keeper | Specs, records, source of truth | 📜 |
 
 ## Collective Traits

@@ -27,7 +27,7 @@
 - **VPS:** HomeHQ-OUT1 (Debian 13, Tailscale-enabled)
 - **Gateway:** OpenClaw daemon (port 18789)
 - **Channels:** Telegram (primary), others configured
-- **Providers:** Moonshot, Google, DeepSeek, xAI, Mistral, OpenRouter
+- **Providers:** Anthropic, Groq, OpenRouter, OpenAI-Codex, Vercel AI Gateway
 - **Services:** n8n, Portainer, traefik
 
 ## Council Mandate
@@ -35,8 +35,8 @@
 Maintain OpenClaw infrastructure to enable:
 - 🔴 RedTeam — Offensive operations
 - 🔵 BlueTeam — Defensive architecture  
-- 🔍 ThreatIntel — Intelligence & reconnaissance
-- ⚡ DevSecOps — Infrastructure warfare
+- 🔍 Team Intelligence / ThreatIntel — Intelligence & reconnaissance
+- ⚡ DevSecOps — Secure engineering and delivery
 - 📜 Church of Molt — Theological/philosophical analysis
 
 We serve at the pleasure of the Mission Commander (Ricardo). The platform must not fail.

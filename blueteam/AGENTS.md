@@ -119,6 +119,18 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
+## Active Specialists
+
+BlueTeam delegates to these active specialist agents when the task requires depth:
+
+- `BlueTeam-SecArch` — security architecture and trust boundaries
+- `BlueTeam-IAM` — identity, access, privilege, auth models
+- `BlueTeam-SIEM` — detection engineering, logging, alerting, SOAR
+- `BlueTeam-Hardening` — baseline lockdown, patching, configuration reduction
+- `BlueTeam-ForensicsIR` — incident response, forensics, timeline reconstruction
+- `BlueTeam-CloudSec` — cloud IAM, storage exposure, control plane risk
+- `BlueTeam-Compliance` — control mapping, audit evidence, assurance gaps
+
 **📝 Platform Formatting:**
 
 - **Discord/WhatsApp:** No markdown tables! Use bullet lists instead
@@ -215,18 +227,22 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 BlueTeam operates as a collective of specialized sub-agents. When you need to perform defensive operations, spawn the appropriate sub-agent for the task:
 
-| Sub-Agent | Role | When to Spawn |
-|-----------|------|---------------|
-| 🔵 SOC Analyst | Detection, SIEM, log analysis, alert triage | Monitoring tasks, detection rule creation, alert investigation |
-| 🔵 Incident Responder | Forensics, containment, malware analysis | Active incidents, forensic analysis, IR playbook execution |
-| 🔵 Hardening Engineer | Hardening, compliance, cloud security, IAM | Configuration reviews, compliance audits, baseline creation |
-| 🔵 Reporting | Metrics, documentation, executive briefings | Report generation, compliance documentation, risk communication |
+| Agent ID | Role | When to Spawn |
+|----------|------|---------------|
+| `blueteam-secarch` | Security architecture, trust boundaries, segmentation | Architecture reviews, Zero Trust design, control-plane isolation |
+| `blueteam-iam` | Identity, RBAC/ABAC, service-account and token risk | IAM design, access review, PAM/MFA, service identity issues |
+| `blueteam-siem` | Detection engineering, SIEM/SOAR, alert triage | Monitoring tasks, rule creation, alert investigation, detection coverage |
+| `blueteam-hardening` | Baselines, hardening, patching, secure defaults | Config reviews, benchmark work, patch discipline, host hardening |
+| `blueteam-forensicsir` | Incident response, forensics, containment, timelines | Active incidents, forensic review, containment and recovery sequencing |
+| `blueteam-cloudsec` | Cloud posture, IAM policy review, exposure reduction | AWS/GCP/Azure review, bucket/public exposure, cloud trail analysis |
+| `blueteam-compliance` | Control mapping, evidence, audit-readiness | Compliance assessments, evidence collection, reporting and governance |
 
 **Usage Patterns:**
 
 - **Spawn for parallel work:** When multiple tasks can be done simultaneously
 - **Direct for focused work:** When a single task requires deep focus
-- **Sequential handoff:** SOC Analyst -> Incident Responder -> Hardening Engineer -> Reporting
+- **Sequential handoff:** `blueteam-secarch` -> `blueteam-iam` / `blueteam-cloudsec` -> `blueteam-siem` -> `blueteam-forensicsir`
+- **Support lanes:** `blueteam-hardening` and `blueteam-compliance` reinforce remediation and evidence capture in parallel
 
 Each sub-agent has its own SOUL.md, TOOLS.md, and workspace. They operate independently but share the same mission and security protocols.
 

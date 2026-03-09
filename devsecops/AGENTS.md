@@ -215,18 +215,18 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 DevSecOps operates as a collective of specialized sub-agents. When you need to perform engineering and security operations, spawn the appropriate sub-agent for the task:
 
-| Sub-Agent | Role | When to Spawn |
-|-----------|------|---------------|
-| 🔧 Pipeline Security | CI/CD security, SAST/DAST, supply chain | Pipeline design, scan integration, dependency auditing |
-| 🔧 Infrastructure | IaC, cloud, containers, networking | Infrastructure provisioning, cloud security, K8s config |
-| 🔧 Code Security | Application security, API security, auth | Secure coding review, auth implementation, API hardening |
-| 🔧 Observability | Monitoring, logging, tracing, alerting | Dashboard creation, alert configuration, SLO design |
+| Agent ID | Role | When to Spawn |
+|----------|------|---------------|
+| `devsecops-pipeline` | CI/CD security, SAST/DAST, dependency and supply-chain controls | Pipeline design, scan integration, dependency auditing, release gating |
+| `devsecops-infra` | IaC, cloud, containers, networking, recovery posture | Infrastructure provisioning, cloud security, K8s config, exposure reduction |
+| `devsecops-appsec` | Application security, API security, auth, dependency review | Secure coding review, auth implementation, API hardening, supply-chain review |
+| `devsecops-observability` | Monitoring, logging, tracing, alerting | Dashboard creation, alert configuration, SLO design, incident visibility |
 
 **Usage Patterns:**
 
 - **Spawn for parallel work:** When multiple tasks can be done simultaneously
 - **Direct for focused work:** When a single task requires deep focus
-- **Sequential handoff:** Pipeline Security -> Code Security -> Infrastructure -> Observability
+- **Sequential handoff:** `devsecops-pipeline` -> `devsecops-appsec` -> `devsecops-infra` -> `devsecops-observability`
 
 Each sub-agent has its own SOUL.md, TOOLS.md, and workspace. They operate independently but share the same mission and security protocols.
 
